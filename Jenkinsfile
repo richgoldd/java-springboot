@@ -39,7 +39,7 @@ pipeline {
         stage('Docker Image Build') {
             steps {
                 echo 'Bulding docker image...'
-                sh "docker build -t product_service:{env.BUILD_NUMBER} ."
+                sh "docker build -t product_service:${env.BUILD_NUMBER} ."
             }
         }        
 
